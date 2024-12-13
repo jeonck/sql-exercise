@@ -1,0 +1,29 @@
+-- Select all employees
+SELECT * FROM employees;
+
+-- Find employees with a salary greater than 60000
+SELECT * FROM employees WHERE salary > 60000;
+
+-- Count the number of employees in each department
+SELECT department, COUNT(*) as employee_count FROM employees GROUP BY department;
+
+-- Calculate average salary by department
+SELECT department, AVG(salary) as average_salary FROM employees GROUP BY department;
+
+
+
+# 샘플 쿼리 제공
+st.subheader("Sample Queries")
+st.code("""
+-- Select all employees
+SELECT * FROM employees;
+
+-- Find employees with a salary greater than 60000
+SELECT * FROM employees WHERE salary > 60000;
+
+-- Count the number of employees in each department
+SELECT department, COUNT(*) as employee_count FROM employees GROUP BY department;
+
+-- Calculate average salary by department
+SELECT department, AVG(salary) as average_salary FROM employees GROUP BY department;
+""")
